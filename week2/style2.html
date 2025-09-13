@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week2-assignment#1</title>
+</head>
+<style>
+    body {
+        font-family: Arial;
+        background-color: #d14836;
+        line-height: 20px;
+        display: block;
+        margin: 8px;
+    }
+
+    div {
+        display: block;
+    }
+
+    .div_nav_top {
+        color: #ffffff;
+        padding: 15px;
+        font-size: 30px;
+        line-height: 26px;
+    }
+
+    .div_nav_top h1 {
+        margin: 0;
+        line-height: 50px;
+    }
+
+    .div_maincontent {
+        position: relative;
+        overflow: auto;
+    }
+
+    .div_leftcontent {
+        width: 190px;
+        float: right;
+    }
+
+    .div_leftcontent ul {
+        padding: 0;
+        font: 16px verdana;
+    }
+
+    .div_leftcontent li {
+        display: list-item;
+        width: 155px;
+        background-color: #d14836;
+        border: 1px solid #d14836;
+        border-radius: 40px;
+        color: #ffffff;
+        list-style-type: none;
+        margin: 10px;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .div_leftcontent a{
+        color:white;
+    }
+
+    .div_leftcontent li.active {
+        background-color: white;
+        color: #d14836;
+        font-weight: bold;
+    }
+
+    .div_leftcontent li:hover,a:hover {
+        color: #d14836;
+        background-color: white;
+    }
+
+
+
+    .div_centercontent {
+        padding: 10px;
+        background-color: #ffffff;
+        font: 80% Verdana;
+    }
+
+    .div_centercontent h1,
+    h2 {
+        color: #d14836;
+    }
+
+    .div_centercontent a:hover{
+        text-decoration: underline;
+    }
+    a {
+        color: #d14836;
+        text-decoration: none;
+    }
+
+    a:link,
+    a:visited {
+        cursor: pointer;
+    }
+
+    .div_rightcontent {
+        background-color: #F6DAD7;
+        color: #d14836;
+        padding: 10px;
+    }
+
+    .div_bottomcontent {
+        text-align: center;
+        padding: 10px;
+        font-size: 70%;
+        color: #ffffff;
+    }
+</style>
+
+<body>
+
+    <!-- nav top 공간 -->
+    <div class="div_nav_top">
+        <h1>
+            Welcome to 한솔'S Homepage(22200628)
+        </h1>
+        <p>Use the menu to select different Stylesheets</p>
+    </div>
+
+    <!-- 중간 콘텐츠 공간-->
+
+    <div class="div_maincontent">
+        <div class=div_leftcontent>
+            <ul>
+
+                <li><a href="style1.html">Stylesheet 1</a></li>
+                <li class="active">Stylesheet 2</li>
+                <li><a href="style3.html">Stylesheet 3</a></li>
+                <li><a href="style4.html">Stylesheet 4</a></li>
+                <li><a href="nostyle.html">No Stylesheet</a></li>
+
+            </ul>
+        </div>
+
+        <div class="div_centercontent">
+            <h1>Same Page Different Stylesheets</h1>
+            <p> This is a demonstration of how different stylesheets can change the layout of your HTML page. You can
+                change the layout of this page by selecting different stylesheets in the menu, or by selecting one of
+                the following links:
+                <br>
+
+                <a href="style1.html">Stylesheet1,</a>
+                <a href="style2.html">Stylesheet2,</a>
+                <a href="style3.html">Stylesheet3,</a>
+                <a href="style4.html">Stylesheet4.</a>
+            </p>
+
+            <h2>No Styles</h2>
+            <p>
+                This page uses DIV elements to group different sections of the HTML page. Click here to see how
+                the page looks like with no stylesheet:
+                <br>
+                <a href="nostyle.html"> No Stylesheet. </a>
+            </p>
+        </div>
+
+        <div class="div_rightcontent">
+            <h3>Side-Bar</h3>
+
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+            ut laoreet dolore magna aliquam erat volutpat.
+            <p></p>
+
+        </div>
+
+
+
+    </div>
+    <div class="div_bottomcontent">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+        ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+        iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+        nulla
+        facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+        delenit
+        augue duis dolore te feugait nulla facilisi.
+    </div>
+
+</body>
+
+</html>
