@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form_style</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "segoe UI";
+        line-height: 1.5;
+        color: #212529;
+        box-sizing: border-box;
+        display: block;
+      }
+      .bgc {
+        background-color: #f8f9fa;
+        opacity: 1 !important;
+      }
+      .container {
+        box-sizing: border-box;
+        display: block;
+        max-width: 960px;
+        padding-right: 12px;
+        padding-left: 12px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .description {
+        text-align: center !important;
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+      }
+      .bootstrap-logo {
+        margin-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5,
+      .h6,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      .read {
+        font-size: 20px;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 16px;
+        margin-left: 4px;
+        margin-right: 4px;
+      }
+      .forExample {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -48px;
+      }
+      .yourcart {
+        order: 6 !important;
+        width: 41.6%;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-top: 48px;
+      }
+      .topElement {
+        margin-bottom: 16px !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        display: flex !important;
+        font-size: 23.4px;
+      }
+      .text {
+        color: #0d6efd;
+      }
+      .amount {
+        border-radius: 800px;
+        background-color: #0d6efd;
+        color: #fff;
+        font-weight: 700;
+        padding-inline: 10px;
+        font-size: 21px;
+      }
+      ul {
+        margin-bottom: 16px;
+        color: #212529;
+        background-color: #fff;
+        border-color: rgba(0, 0, 0, 0.125);
+        border-radius: 6px;
+        padding: 16px 8px;
+        flex-direction: column;
+      }
+      .itemlist {
+        line-height: 1.25 !important;
+        justify-content: space-between !important;
+        display: flex;
+        position: relative;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+      }
+      .productName {
+        margin-block: 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .productInfo {
+        color: #6c757d;
+        font-size: 14px;
+      }
+      .color {
+        color: #198754;
+      }
+      .promocode {
+        padding: 8px;
+        border-width: 1px;
+        border-color: #0000002d;
+        border-radius: 6px;
+        border: 1px solid #0000002d;
+      }
+      .input-code {
+        display: block;
+        display: flex;
+        position: relative;
+      }
+      .form_control {
+        width: 80%;
+        display: block;
+        padding: 6px 12px;
+        font-size: 16px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+      .redeem {
+        color: #fff;
+        background: #6c757d;
+        border-color: #6c757d;
+        font-size: 16px;
+        padding: 12px 6px;
+        cursor: pointer;
+      }
+      .redeem:hover {
+        background-color: black;
+      }
+
+      .information {
+        width: 53%;
+        margin-top: 48px;
+      }
+      .inform_topic {
+        margin-bottom: 16px;
+        font-size: 23px;
+        font-weight: 500;
+      }
+
+      .name {
+        flex: 0 0 auto;
+
+        width: 50%;
+      }
+      .form_label {
+        margin-bottom: 8px;
+        display: inline-block;
+        cursor: default;
+      }
+
+      .inform {
+        margin-top: 16px;
+      }
+      .inputtag {
+        width: 3%;
+        display: flex;
+        padding: 6px 12px;
+        font-size: 16px;
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-radius: 6px;
+      }
+      .input_group {
+        display: flex;
+        align-items: center;
+      }
+      #birth {
+        width: 60%;
+        padding: 10px 30px;
+        border: 1px solid #ced4da;
+        border-radius: 6px;
+        font-weight: 10;
+      }
+      .optional {
+        color: #6c757d;
+      }
+      .address {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      .form_select {
+        padding: 6px 36px 6px 12px;
+      }
+      #country,
+      #state {
+        padding: 6px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 6px;
+        width: 60%;
+        font-size: 16px;
+      }
+      #zip {
+        width: 30%;
+      }
+      hr {
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+
+      textarea {
+        margin-top: 2px;
+      }
+
+      .short_term {
+        margin-top: 12px;
+      }
+      .long_term {
+        margin-top: 12px;
+      }
+
+      .checkout {
+        cursor: pointer;
+        width: 100% !important;
+        padding: 8px 16px;
+        font-size: 20px;
+        border-radius: 8px;
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        
+      }
+      .checkout:hover {
+        background-color: #0b5ed7;
+      }
+      footer{
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body class="bgc">
+    <!-- 전체를 감싸는 container -->
+    <div class="container">
+      <main>
+        <!-- Checkout fomr을 설명하는 description -->
+        <div class="description">
+          <img
+            class="bootstrap-logo"
+            src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg"
+            width="72"
+            height="57"
+          />
+          <h2>Checkout form</h2>
+          <p class="read">
+            Below is an example form built entirely with Bootstrap’s form
+            controls. Each required form group has a validation state that can
+            be triggered by attempting to submit the form without completing it.
+          </p>
+        </div>
+        <!-- 장바구니와 개인정보를 입력받는 formExample -->
+        <div class="forExample">
+          <!-- 장바구니인 your cart -->
+          <div class="yourcart">
+            <h4 class="topElement">
+              <span class="text">Your cart</span>
+              <span class="amount">3</span>
+            </h4>
+            <ul>
+              <li class="itemlist">
+                <div>
+                  <h6 class="productName">Product name</h6>
+                  <small class="productInfo">Brief description</small>
+                </div>
+                <span class="price">$12</span>
+              </li>
+              <li class="itemlist">
+                <div>
+                  <h6 class="productName">Second product</h6>
+                  <small class="productInfo">Brief description</small>
+                </div>
+                <span class="price">$8</span>
+              </li>
+              <li class="itemlist">
+                <div>
+                  <h6 class="productName">Third product</h6>
+                  <small class="productInfo">Brief description</small>
+                </div>
+                <span class="price">$5</span>
+              </li>
+              <li class="itemlist color bgc">
+                <div>
+                  <h6 class="productName">Promo code</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span class="price">-$5</span>
+              </li>
+              <li class="itemlist">
+                <span>Total (USD)</span>
+                <strong>$20</strong>
+              </li>
+            </ul>
+            <form class="promocode">
+              <div class="input-code">
+                <input
+                  type="text"
+                  class="form_control"
+                  placeholder="Promo code"
+                />
+                <button type="submit" class="redeem">Redeem</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- form태그로 개인정보를 입력받는 informatinon -->
+          <div class="information">
+            <!-- Billing address -->
+            <h4 class="inform_topic">Billing address</h4>
+
+            <form action="#" method="GET">
+              <div class="billingaddress">
+                <div class="name">
+                  <label for="firstname" class="form_label">First name</label>
+                  <input
+                    type="text"
+                    class="form_control"
+                    id="firstname"
+                    required
+                  />
+                </div>
+                <div class="name">
+                  <label for="lastname" class="form_label">Last name</label>
+                  <input
+                    type="text"
+                    class="form_control"
+                    id="lastname"
+                    required
+                  />
+                </div>
+
+                <div class="inform">
+                  <label for="username" class="form_lab el">Username</label>
+                  <div class="input_group">
+                    <span class="inputtag"> @ </span>
+                    <input
+                      type="text"
+                      class="form_control"
+                      id="username"
+                      placeholder="Username"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="inform">
+                  <label for="birth" class="form_label">Birth</label>
+                  <div class="input_group">
+                    <input type="date" id="birth" name="birth" required />
+                  </div>
+                </div>
+
+                <div class="inform">
+                  <label for="email" class="form_label">Email </label>
+                  <span class="optional"> (Optional) </span>
+                  <input
+                    type="text"
+                    class="form_control"
+                    id="email"
+                    placeholder="you@example.com"
+                  />
+                </div>
+
+                <div class="inform">
+                  <label for="address" class="form_label">Address</label>
+                  <input
+                    type="text"
+                    class="form_control"
+                    id="address"
+                    placeholder="1234 Main St"
+                    required
+                  />
+                </div>
+
+                <div class="inform">
+                  <label for="address2" class="form_label">Address2 </label>
+                  <span class="optional"> (Optional) </span>
+                  <input
+                    type="text"
+                    class="form_control"
+                    id="address2"
+                    placeholder="Apartment or suite"
+                  />
+                </div>
+
+                <div class="address">
+                  <label for="country" class="form_label">Country</label>
+                  <select class="form_select" id="country" required>
+                    <option>Choose...</option>
+                    <option>Korea</option>
+                  </select>
+                </div>
+
+                <div class="address">
+                  <label for="state" class="form_label">State</label>
+                  <select class="form_select" id="state" required>
+                    <option>Choose...</option>
+                    <option>California</option>
+                  </select>
+                </div>
+                <div class="address">
+                  <label for="zip" class="form_label">Zip</label>
+                  <input type="text" class="form_control" id="zip" required />
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="form_check">
+                <input type="checkbox" class="check_input" id="sameaddress" />
+                <label class="check_label" for="sameaddress"
+                  >Shipping address is the same as my billing address</label
+                >
+              </div>
+              <div class="form_check">
+                <input type="checkbox" class="check_input" id="saveinform" />
+                <label class="check_label" for="saveinform"
+                  >Shipping address is the same as my billing address</label
+                >
+              </div>
+
+              <hr />
+
+              <!-- Payment -->
+              <h4 class="inform_topic">Payment</h4>
+              <div class="method">
+                <div class="form_check">
+                  <input
+                    class="check_input"
+                    id="credit"
+                    name="paymentMethod"
+                    type="radio"
+                    checked
+                    required
+                  />
+                  <label class="check_label" for="credit">Credit card</label>
+                </div>
+
+                <div class="form_check">
+                  <input
+                    class="check_input"
+                    id="debit"
+                    name="paymentMethod"
+                    type="radio"
+                    required
+                  />
+                  <label class="check_label" for="debit">Debit card</label>
+                </div>
+
+                <div class="form_check">
+                  <input
+                    class="check_input"
+                    id="paypal"
+                    name="paymentMethod"
+                    type="radio"
+                    required
+                  />
+                  <label class="check_label" for="paypal">Paypal</label>
+                </div>
+              </div>
+
+              <div class="method_information">
+                <div class="long_term">
+                  <label class="form_label" for="cardname">Name on card</label
+                  ><input
+                    type="text"
+                    class="form_control"
+                    id="cardname"
+                    required
+                  />
+                </div>
+
+                <div class="long_term">
+                  <label class="form_label" for="cardnumber"
+                    >Credit card number</label
+                  ><input
+                    type="text"
+                    class="form_control"
+                    id="cardnumber"
+                    required
+                  />
+                </div>
+
+                <div class="short_term">
+                  <label class="form_label" for="expiration">Expiration</label>
+                  <input
+                    type="text"
+                    class="form_control"
+                    id="expiration"
+                    required
+                  />
+                </div>
+
+                <div class="short_term">
+                  <label class="form_label" for="ccv">CCV</label
+                  ><input type="text" class="form_control" id="ccv" required />
+                </div>
+
+                <div class="short_term">
+                  <label class="form_label" for="sign">Sign</label>
+                  <p>
+                    <textarea id="sign" name="sign" cols="20" required>
+                    </textarea>
+                  </p>
+                </div>
+              </div>
+
+              <hr />
+
+              <button class="checkout" type="submit">
+                Continue to checkout
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p class="companyname">© 2017–2022 Company Name</p>
+      </footer>
+    </div>
+  </body>
+</html>
