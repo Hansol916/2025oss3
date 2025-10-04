@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./my.css" />
+    <title>Document</title>
+    <script>
+      function validateForm() {
+        alert("게시물을 삭제할까요?");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 상단 네비게이션바 -->
+    <header class="management">
+      <div class="management_1">
+        <h1 class="title">MyFriends</h1>
+
+        <div class="management_2">
+          <button class="addlist" onclick="window.location.href='add.html'">
+            추가
+          </button>
+          <button class="addlist" onclick="return validateForm()">삭제</button>
+          <button class="addlist" onclick="window.location.href='index.html'">
+            목록
+          </button>
+          <button class="addlist" onclick="window.location.href='edit.html'">
+            수정
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="view-container">
+      <h2 class="section-title">Friends</h2>
+
+      <div class="card-grid four-col">
+        <!-- 1 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">임한솔</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">23살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-2888-0399</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span
+            ><span class="value">포항시 남구</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">2002-03-14</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">178cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">68kg</span>
+          </p>
+        </article>
+
+        <!-- 2 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">김철수</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">29살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-2898-0399</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span
+            ><span class="value">포항시 북구</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">1996-09-02</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">175cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">73kg</span>
+          </p>
+        </article>
+
+        <!-- 3 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">김하영</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">8살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-1234-7878</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span><span class="value">경남 김해</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">2017-05-11</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">128cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">28kg</span>
+          </p>
+        </article>
+
+        <!-- 4 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">박명수</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">56살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-6881-0000</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span
+            ><span class="value">서울시 강남구</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">1969-08-27</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">172cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">71kg</span>
+          </p>
+        </article>
+
+        <!-- 5 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">유재석</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">53살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-0000-1111</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span
+            ><span class="value">서울시 서초구</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">1972-08-14</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">177cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">67kg</span>
+          </p>
+        </article>
+
+        <!-- 6 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">박재훈</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">29살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-2424-2424</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span
+            ><span class="value">경기도 이천</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">1996-12-03</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">181cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">76kg</span>
+          </p>
+        </article>
+
+        <!-- 7 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">김강민</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">33살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-2821-3349</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span><span class="value">인천 송도</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">1992-04-22</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">179cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">79kg</span>
+          </p>
+        </article>
+
+        <!-- 8 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">이명박</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">60살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-2942-0399</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span
+            ><span class="value">전라도 나주</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">1965-01-10</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">170cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">70kg</span>
+          </p>
+        </article>
+
+        <!-- 9 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">강형욱</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">48살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-3333-2098</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span
+            ><span class="value">대전 둔산동</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">1977-06-30</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">180cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">75kg</span>
+          </p>
+        </article>
+
+        <!-- 10 -->
+        <article class="friend-card h-rect">
+          <h3 class="friend-name">김원훈</h3>
+          <p class="info-line">
+            <span class="label">나이</span><span class="value">38살</span>
+          </p>
+          <p class="info-line">
+            <span class="label">연락처</span
+            ><span class="value">010-2457-0111</span>
+          </p>
+          <p class="info-line">
+            <span class="label">주소</span><span class="value">제주특별시</span>
+          </p>
+          <p class="info-line">
+            <span class="label">생일</span><span class="value">1987-10-01</span>
+          </p>
+          <p class="info-line">
+            <span class="label">키</span><span class="value">174cm</span>
+          </p>
+          <p class="info-line">
+            <span class="label">몸무게</span><span class="value">72kg</span>
+          </p>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
