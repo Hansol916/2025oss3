@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./my.css" />
+    <title>Document</title>
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const age = document.getElementById("age").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const city = document.getElementById("city").value.trim();
+        const major = document.getElementById("major").value.trim();
+        const birthday = document.getElementById("birthday").value.trim();
+
+        if (name === "") {
+          alert("이름을 입력하세요.");
+          return false;
+        }
+        if (age === "" || isNaN(age)) {
+          alert("나이를 숫자로 입력하세요.");
+          return false;
+        }
+        if (email === "" || !email.includes("@")) {
+          alert("올바른 이메일을 입력하세요.");
+          return false;
+        }
+        if (city === "") {
+          alert("사는 곳을 입력하세요.");
+          return false;
+        }
+        if (major === "") {
+          alert("전공을 입력하세요.");
+          return false;
+        }
+        if (birthday === "") {
+          alert("생일을 입력하세요.");
+          return false;
+        }
+
+        alert("게시물이 추가됩니다!");
+        return true;
+      }
+
+      function cancelForm() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- 상단 네비게이션바 -->
+      <header class="management">
+        <div class="management_1">
+          <h1 class="title">MyFriends</h1>
+
+          <div class="management_2">
+            <button class="addlist" onclick="return validateForm()">
+              확인
+            </button>
+            <button class="addlist" onclick="cancelForm()">취소</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- 친구리스트 -->
+      <div class="friendslist">Friends</div>
+
+      <main>
+        <div class="form">
+          <form onsubmit="return validateForm()">
+            <div class="form-group">
+              <h3>이름</h3>
+              <input type="text" id="name" />
+            </div>
+            <div class="form-group">
+              <h3>나이</h3>
+              <input type="text" id="age" />
+            </div>
+            <div class="form-group">
+              <h3>이메일</h3>
+              <input type="text" id="email" />
+            </div>
+            <div class="form-group">
+              <h3>사는 곳</h3>
+              <input type="text" id="city" />
+            </div>
+            <div class="form-group">
+              <h3>전공</h3>
+              <input type="text" id="major" />
+            </div>
+            <div class="form-group">
+              <h3>생일</h3>
+              <input type="date" id="birthday" />
+            </div>
+            <div class="form-group">
+              <h3>키</h3>
+              <input type="text" id="height" />
+            </div>
+            <div class="form-group">
+              <h3>몸무게</h3>
+              <input type="text" id="weight" />
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
