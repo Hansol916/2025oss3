@@ -1,0 +1,374 @@
+/* =========================
+   Base: 공통 레이아웃/헤더
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #111827;
+  background: #fff;
+}
+
+.wrapper,
+.management,
+.management_1 {
+  width: 100%;
+}
+
+.management_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: dodgerblue;
+  color: #fff;
+  width: 400px;
+  height: 60px;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.management_2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 20px;
+}
+.addlist {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  height: 40px;
+  padding: 0 16px;
+  background: dodgerblue;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* 섹션 타이틀 */
+.friendslist {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* 컨테이너 공통 폭 */
+.container-1200 {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* =========================
+   index.html : 카드 그리드 (이미지 포함)
+   ========================= */
+.blocklist {
+  /* 기존 width/height 고정 제거, 공통 컨테이너 사용 */
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+.blocklist .grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.friend-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  width: 100%;
+  height: auto; /* ← 고정폭·고정높이 제거 */
+}
+
+.friend-thumb {
+  /* index 썸네일 박스 */
+  height: 171px;
+  align-self: stretch;
+  background: #e6f2ff;
+}
+.friend-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.friend-body {
+  display: flex;
+  padding: 0 10px 10px;
+  flex-direction: column;
+  gap: 2px;
+}
+.friend_name {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.friend_age,
+.friend_number,
+.friend_address {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product-footer {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.badge {
+  display: flex;
+  min-width: 57px;
+  height: 28px;
+  padding: 6px 12px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: dodgerblue;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* =========================
+   view.html : 텍스트 카드 (이미지 없음, 가로 긴 직사각형)
+   ========================= */
+.view-container {
+  max-width: 1200px;
+  margin: 20px auto 60px;
+  padding: 0 16px;
+}
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0 16px;
+}
+
+.card-grid.four-col {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+/* 과거 two-col 클래스를 썼던 코드 호환 */
+.card-grid.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.friend-card.h-rect {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  aspect-ratio: 16/6;
+  min-height: 110px;
+}
+.friend-name {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+.info-line {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+.info-line .label {
+  display: inline-block;
+  width: 64px;
+  color: #6b7280;
+  font-weight: 700;
+}
+.info-line .value {
+  color: #111827;
+}
+
+/* =========================
+   add.html / edit.html : 폼 공통
+   ========================= */
+.form {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.form-group h3,
+.form-group label {
+  width: 90px;
+  margin: 0;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 14px;
+}
+.form-group input {
+  flex: 1 1 auto;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  max-width: 420px;
+}
+/* edit-page 전용 래퍼 (선택) */
+.edit-form {
+  max-width: 640px;
+  margin: 24px auto;
+}
+
+/* =========================
+   Responsive : Tablet / Phone
+   ========================= */
+
+/* Tablet (≤1024px) — 옵션 */
+@media (max-width: 1024px) {
+  /* index: 5 → 3열 */
+  .blocklist .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  /* view: 4 → 2열 */
+  .card-grid.four-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Phone (≤640px) */
+@media (max-width: 640px) {
+  /* 헤더: 세로 정렬 + 버튼 줄바꿈 */
+  .management_1 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .title {
+    width: 100%;
+    height: 50px;
+    font-size: 28px;
+    margin: 0 12px;
+  }
+  .management_2 {
+    margin: 0 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .addlist {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+    min-width: 0;
+  }
+
+  /* 컨테이너 여백 */
+  .view-container,
+  .blocklist,
+  .form,
+  .edit-form {
+    max-width: 100%;
+    padding: 0 12px;
+    margin: 16px auto;
+  }
+
+  /* index: 2열 */
+  .blocklist .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .friend-thumb {
+    height: 120px;
+  } /* 썸네일 살짝 축소 */
+  .friend-body {
+    padding: 8px 10px 12px;
+  }
+
+  /* view: 1열 + 카드 높이 자동화 */
+  .card-grid.four-col,
+  .card-grid.two-col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .friend-card.h-rect {
+    aspect-ratio: auto;
+    min-height: 0;
+    padding: 14px 16px;
+  }
+  .friend-name {
+    font-size: 16px;
+  }
+  .info-line .label {
+    width: 72px;
+  }
+
+  /* 폼: 세로 1열 */
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .form-group h3,
+  .form-group label {
+    width: auto;
+  }
+  .form-group input {
+    max-width: 100%;
+  }
+}
+/* ===== view.html 카드 높이 문제 패치 (맨 아래에 추가) ===== */
+/* 가로비 비율 강제 제거 → 내용만큼 세로가 늘어남 */
+.card-grid.four-col .friend-card.h-rect {
+  aspect-ratio: auto; /* 중요: 16/6 강제 비율 해제 */
+  min-height: 0; /* 높이 제한 해제 */
+  padding: 16px 20px; /* 여백 유지 */
+}
+
+/* 데스크톱에서도 줄 간격 약간 촘촘하게 */
+.friend-card.h-rect .info-line {
+  margin: 4px 0;
+}
+.friend-card.h-rect .info-line .label {
+  width: 72px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./my.css" />
+    <title>Document</title>
+
+    <script>
+      // 헤더의 [확인] 버튼이 호출
+      function validateForm() {
+        const v = (id) => document.getElementById(id).value.trim();
+
+        const name = v("name");
+        const age = v("age");
+        const phone = v("phone");
+        const address = v("address");
+        const email = v("email");
+        const major = v("major");
+        const birthday = v("birthday");
+        const height = v("height");
+        const weight = v("weight");
+
+        if (!name) {
+          alert("이름을 입력하세요.");
+          return false;
+        }
+        if (!age || isNaN(age) || +age < 0 || +age > 130) {
+          alert("나이를 0~130 사이 숫자로 입력하세요.");
+          return false;
+        }
+        if (!phone || !/^\d{2,3}-\d{3,4}-\d{4}$/.test(phone)) {
+          alert("연락처 형식은 010-1234-5678 입니다.");
+          return false;
+        }
+        if (!address) {
+          alert("주소를 입력하세요.");
+          return false;
+        }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          alert("올바른 이메일을 입력하세요.");
+          return false;
+        }
+        if (!major) {
+          alert("전공을 입력하세요.");
+          return false;
+        }
+        if (!birthday) {
+          alert("생일을 입력하세요.");
+          return false;
+        }
+        if (!height || isNaN(height) || +height < 30 || +height > 250) {
+          alert("키를 30~250(cm) 사이 숫자로 입력하세요.");
+          return false;
+        }
+        if (!weight || isNaN(weight) || +weight < 2 || +weight > 300) {
+          alert("몸무게를 2~300(kg) 사이 숫자로 입력하세요.");
+          return false;
+        }
+
+        // 요구사항: Confirm 창
+        if (confirm("게시물을 수정할까요?")) {
+          alert("수정되었습니다!");
+        }
+        return false; // 실제 저장은 없으므로 기본 동작 막기
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 상단 네비게이션바 (네가 준 그대로) -->
+    <header class="management">
+      <div class="management_1">
+        <h1 class="title">MyFriends</h1>
+
+        <div class="management_2">
+          <button class="addlist" onclick="return validateForm()">확인</button>
+          <button class="addlist" onclick="window.location.href='index.html'">
+            취소
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 아래부터 붙여넣기 -->
+    <main>
+      <div class="form edit-form">
+        <form id="editForm">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input id="name" type="text" value="임한솔" />
+          </div>
+
+          <div class="form-group">
+            <label for="age">나이</label>
+            <input id="age" type="text" value="23" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">연락처</label>
+            <input id="phone" type="tel" value="010-2888-0399" />
+          </div>
+
+          <div class="form-group">
+            <label for="address">주소</label>
+            <input id="address" type="text" value="포항시 남구" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input id="email" type="email" value="hansol@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="major">전공</label>
+            <input id="major" type="text" value="컴퓨터공학" />
+          </div>
+
+          <div class="form-group">
+            <label for="birthday">생일</label>
+            <input id="birthday" type="date" value="2002-03-14" />
+          </div>
+
+          <div class="form-group">
+            <label for="height">키(cm)</label>
+            <input id="height" type="text" value="178" />
+          </div>
+
+          <div class="form-group">
+            <label for="weight">몸무게(kg)</label>
+            <input id="weight" type="text" value="68" />
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
